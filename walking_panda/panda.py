@@ -6,8 +6,9 @@ from direct.actor.Actor import Actor
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self):
+    def __init__(self, no_rotate=False):
         ShowBase.__init__(self)
+         ## And The rest
 
         # Load the environment model.
         self.scene = self.loader.loadModel("models/environment")
@@ -18,7 +19,8 @@ class WalkingPanda(ShowBase):
         self.scene.setPos(-8, 42, 0)
 
         # Add the spinCameraTask procedure to the task manager.
-        self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
+        if (no_rotate == False):
+           self.taskMgr.add(self.spinCameraTask, "SpinCameraTask")
 
         # Load and transform the panda actor.
         self.pandaActor = Actor("models/panda-model",
@@ -37,5 +39,7 @@ class WalkingPanda(ShowBase):
         return Task.cont
 
 
-walking = WalkingPanda()
-walking.run()
+
+
+
+
