@@ -6,7 +6,7 @@ from direct.actor.Actor import Actor
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, no_rotate=False):
+    def __init__(self, Audio , scale = True, no_rotate=False, color=True):
         ShowBase.__init__(self)
          ## And The rest
 
@@ -29,6 +29,16 @@ class WalkingPanda(ShowBase):
         self.pandaActor.reparentTo(self.render)
         # Loop its animation.
         self.pandaActor.loop("walk")
+
+        if (color == True):
+            self.pandaActor.set_color_scale(1,0,0,1.0)
+            self.pandaActor.reparentTo(self.render)
+
+            mysound= self.loader.loadSfx("walking_panda/music.mp3")
+            mysound.play()
+
+        if (scale == True):
+            self.pandaActor.set_scale(1,1,1)
 
     # Define a procedure to move the camera.
     def spinCameraTask(self, task):
