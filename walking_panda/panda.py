@@ -6,7 +6,7 @@ from direct.actor.Actor import Actor
 
 
 class WalkingPanda(ShowBase):
-    def __init__(self, Audio , scale = True, no_rotate=False, color=True):
+    def __init__(self, Audio,scale=True, no_rotate=False, color=True):
         ShowBase.__init__(self)
          ## And The rest
 
