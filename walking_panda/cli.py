@@ -9,7 +9,7 @@ def cli():
                         action="store_true")
     parser.add_argument("--color", help="Change color",
                         action="store_true")
-    parser.add_argument("--Audio", help="Change color",
+    parser.add_argument("--audio", help="Change audio",
                         action="store_true")
     parser.add_argument("--scale", help="Change scale",
                         action="store_true")
