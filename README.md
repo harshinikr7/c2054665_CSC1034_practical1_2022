@@ -1,7 +1,10 @@
 Portfolio 1
 ===========
 
-This package is build as a part of the CSC1034: Portfolio-1. Below, I have mentioned the single command line options I have used in the project along with their purpose.
+This package is build as a part of the CSC1034: Portfolio-1. 
+
+
+Below, I have mentioned the single command line options I have used in the project along with their purpose.
 Running the below commands will allow you to understand their purpose.
 
 
@@ -21,4 +24,14 @@ This function is used in order to disable the default audio that is played by th
 4. `python Walking_panda.py` --scale  
 
 This function is used in order to set the size of the panda that is displayed on screen by inserting integer or floating point value.
+
+5. `python Walking_panda.py` --no_environment
+
+The purpose of this function is to disable the environment of the panda animation and display no environment.
+
+6. `python Walking_panda.py` --speed_change
+
+This function is used in order to change the default speed of the panda animation.
+
+
 
